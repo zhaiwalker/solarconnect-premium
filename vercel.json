@@ -1,1 +1,10 @@
-{ "buildCommand": "npm run build", "outputDirectory": "dist", "framework": "vite" }
+{
+  "buildCommand":"npm run build","outputDirectory":"dist","framework":"vite",
+  "functions":{"api/page.ts":{"includeFiles":"dist/index.html"},"api/sitemap.ts":{"includeFiles":"dist/sitemap-static.xml"}},
+  "rewrites":[
+    {"source":"/product/:slug","destination":"/api/page?slug=:slug"},
+    {"source":"/ru/product/:slug","destination":"/api/page?slug=:slug&region=ru"},
+    {"source":"/sitemap.xml","destination":"/api/sitemap"}
+  ],
+  "headers":[{"source":"/(.*)","headers":[{"key":"X-Content-Type-Options","value":"nosniff"},{"key":"Referrer-Policy","value":"strict-origin-when-cross-origin"},{"key":"X-Frame-Options","value":"DENY"}]}]
+}

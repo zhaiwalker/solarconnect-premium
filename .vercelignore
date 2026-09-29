@@ -3,3 +3,9 @@ public/images/panel-studio.png
 public/images/panel-studio-dark.png
 VERIFICATION.md
 DESIGN.md
+.solar-data/
+.test-data/
+.env*
+tests/
+config.env.example
+.playwright-mcp/

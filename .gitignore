@@ -3,5 +3,9 @@ dist/
 .vercel/
 .env*
 reference/
+.solar-data/
+.test-data/
+.playwright-mcp/
+!config.env.example
 
 .vercel
